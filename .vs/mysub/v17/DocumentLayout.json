@@ -18,7 +18,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -28,9 +28,9 @@
               "RelativeDocumentMoniker": "ipchange.py",
               "ToolTip": "E:\\Visual studio\\mysub\\ipchange.py",
               "RelativeToolTip": "ipchange.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-04-25T08:54:32.753Z",
+              "WhenOpened": "2024-04-25T09:10:09.431Z",
               "EditorCaption": ""
             }
           ]
