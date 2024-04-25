@@ -17,6 +17,36 @@ let addressesapi = [
    'https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt'
 ];
 
+async function fetchFromPrivateRepo(repoUrl, token) {
+	const headers = {
+		'Authorization': `token ${token}`,
+		'Accept': 'application/vnd.github.v3.raw'
+	};
+
+	const response = await fetch(repoUrl, { headers });
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	}
+
+	return await response.text();
+}
+
+async function mergeWithAddressesapi() {
+	const privateRepoUrl = 'https://api.github.com/repos/yeqingyeqing/mysub/main/yeqing.txt'; // Replace with your private repo URL
+	const token = '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'; // Replace with your GitHub token
+
+	try {
+		const fileContent = await fetchFromPrivateRepo(privateRepoUrl, token);
+		const fileContentLines = fileContent.split('\n').filter(line => line.trim() !== '');
+		addressesapi = [...addressesapi, ...fileContentLines];
+	} catch (error) {
+		console.error('Error fetching from private repo:', error);
+	}
+}
+
+mergeWithAddressesapi();
+
+
 
 let DLS = 4;//速度下限
 let addressescsv = [
